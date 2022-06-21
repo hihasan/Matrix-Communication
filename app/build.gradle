@@ -41,6 +41,13 @@ android {
     buildFeatures {
         dataBinding = true
     }
+    sourceSets {
+        main {
+            res {
+                srcDirs 'src\\main\\res', 'src\\main\\res\\anim'
+            }
+        }
+    }
 }
 
 private Integer generateVersionCode() {
