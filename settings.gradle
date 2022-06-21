@@ -1,9 +1,13 @@
+
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
         google()
         mavenCentral()
     }
+
+
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -11,6 +15,9 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
     }
+
+
 }
+
 rootProject.name = "Matrix Communication"
 include ':app'
