@@ -25,7 +25,7 @@ class ChatListFragment : BaseFragment() {
     }
 
     private fun initListeners() {
-        binding.actionFab.setImageDrawable(resources.getDrawable(R.drawable.ic_baseline_person_add_alt_1_24)   )
+        binding.actionFab.setImageDrawable(resources.getDrawable(R.drawable.ic_baseline_message_24)   )
     }
 
 }

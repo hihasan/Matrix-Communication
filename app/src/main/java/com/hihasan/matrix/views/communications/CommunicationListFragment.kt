@@ -25,6 +25,6 @@ class CommunicationListFragment : BaseFragment() {
     }
 
     private fun initListeners() {
-        binding.actionFab.visibility = View.GONE
+        binding.actionFab.setImageDrawable(resources.getDrawable(R.drawable.ic_baseline_add_ic_call_24, requireContext().theme))
     }
 }

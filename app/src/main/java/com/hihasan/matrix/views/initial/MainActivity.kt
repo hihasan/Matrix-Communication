@@ -1,24 +1,26 @@
-package com.hihasan.matrix.views
+package com.hihasan.matrix.views.initial
 
 import android.app.Dialog
+import android.app.SearchManager
 import android.os.Bundle
-import android.view.View
+import android.view.Menu
 import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.TranslateAnimation
-import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
+import androidx.core.view.MenuItemCompat
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.google.android.material.dialog.MaterialDialogs
 import com.hihasan.matrix.R
 import com.hihasan.matrix.adapter.MenuFragmentPagerAdapter
 import com.hihasan.matrix.databinding.ActivityMainBinding
+import com.hihasan.matrix.databinding.MenuLayoutBinding
 
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var bindingDialog : MenuLayoutBinding
     var flag : Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,7 +39,13 @@ class MainActivity : AppCompatActivity() {
     private fun settingsMenu(){
         binding.profile.setOnClickListener {
             val dialog = Dialog(this@MainActivity)
-            dialog.setContentView(R.layout.menu_layout)
+            bindingDialog = MenuLayoutBinding.inflate(layoutInflater)
+            dialog.setContentView(bindingDialog.root)
+
+            bindingDialog.close.setOnClickListener{
+                dialog.dismiss()
+            }
+
             dialog.show()
         }
     }
@@ -104,9 +112,16 @@ class MainActivity : AppCompatActivity() {
         window.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
     }
 
-//    override fun onSupportNavigateUp(): Boolean {
-//        val navController = findNavController(R.id.nav_host_fragment_content_main)
-//        return navController.navigateUp(appBarConfiguration)
-//                || super.onSupportNavigateUp()
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        menuInflater.inflate(R.menu.menu_main, menu)
+//
+//        val searchView: SearchView =
+//            MenuItemCompat.getActionView(menu!!.findItem(R.id.action_search)) as SearchView
+//        val searchManager = getSystemService(SEARCH_SERVICE) as SearchManager
+//        searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
+//
+//        return true
 //    }
+
+
 }

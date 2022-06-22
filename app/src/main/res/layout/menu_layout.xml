@@ -47,7 +47,7 @@
                     android:layout_height="@dimen/_24sdp"
                     android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
-                    android:src="@drawable/circle_shape"
+                    android:src="@drawable/ic_qr_code"
                     android:layout_marginRight="@dimen/_4sdp"/>
 
                 <RelativeLayout

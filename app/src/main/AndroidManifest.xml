@@ -20,7 +20,7 @@
         android:theme="@style/Theme.MatrixCommunication"
         tools:targetApi="31">
         <activity
-            android:name=".views.MainActivity"
+            android:name=".views.initial.SplashActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.MatrixCommunication.NoActionBar">
@@ -30,6 +30,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".views.initial.MainActivity"
+            android:theme="@style/Theme.MatrixCommunication.NoActionBar"/>
     </application>
+
 
 </manifest>
