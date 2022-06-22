@@ -25,7 +25,10 @@ class ChatListFragment : BaseFragment() {
     }
 
     private fun initListeners() {
-        binding.actionFab.setImageDrawable(resources.getDrawable(R.drawable.ic_baseline_message_24)   )
+        binding.actionFab.setImageDrawable(resources.getDrawable(R.drawable.ic_baseline_message_24))
+        binding.animationView.setAnimation(R.raw.chat_animation)
+        binding.titleTv.text = getString(R.string.chats)
+        binding.bodyTv.text = getString(R.string.chats_message)
     }
 
 }

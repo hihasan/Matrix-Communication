@@ -19,5 +19,37 @@
             app:backgroundTint="@color/black"
             android:layout_margin="@dimen/_16sdp"/>
 
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="@dimen/_256sdp"
+            android:layout_height="@dimen/_256sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_26sdp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/animationView"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/body_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginLeft="@dimen/_56sdp"
+            android:layout_marginRight="@dimen/_56sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/title_tv"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:gravity="center"/>
+
     </RelativeLayout>
 </layout>

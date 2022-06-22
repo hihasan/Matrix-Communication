@@ -26,5 +26,8 @@ class CommunicationListFragment : BaseFragment() {
 
     private fun initListeners() {
         binding.actionFab.setImageDrawable(resources.getDrawable(R.drawable.ic_baseline_add_ic_call_24, requireContext().theme))
+        binding.animationView.setAnimation(R.raw.call_animation)
+        binding.titleTv.text = getString(R.string.calls)
+        binding.bodyTv.text = getString(R.string.calls_message)
     }
 }

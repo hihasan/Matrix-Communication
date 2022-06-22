@@ -25,7 +25,10 @@ class RoomListFragment : BaseFragment() {
 
 
     private fun initListeners() {
-        binding.actionFab.setImageDrawable(resources.getDrawable(R.drawable.ic_baseline_add_24, requireContext().theme)   )
+        binding.actionFab.setImageDrawable(resources.getDrawable(R.drawable.ic_baseline_add_24, requireContext().theme))
+        binding.animationView.setAnimation(R.raw.room_animation)
+        binding.titleTv.text = getString(R.string.rooms)
+        binding.bodyTv.text = getString(R.string.rooms_message)
     }
 
 }
