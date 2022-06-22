@@ -46,44 +46,51 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/toolbar">
+
             <RelativeLayout
                 android:id="@+id/layer1"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_32sdp"
-                android:layout_margin="@dimen/_4sdp">
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_4sdp">
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profile_iv"
-                    android:layout_width="@dimen/_24sdp"
-                    android:layout_height="@dimen/_24sdp"
-                    android:src="@drawable/ic_baseline_add_ic_call_24"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
                     android:layout_centerVertical="true"
+                    android:src="@drawable/ic_baseline_add_ic_call_24"
                     app:civ_border_color="@color/black"
                     app:civ_border_width="@dimen/_1sdp"
-                    app:civ_circle_background_color="@color/black"/>
+                    app:civ_circle_background_color="@color/black" />
+
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/scanner_iv"
-                    android:layout_width="@dimen/_24sdp"
-                    android:layout_height="@dimen/_24sdp"
-                    android:layout_centerVertical="true"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
                     android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_qr_code"
-                    android:layout_marginRight="@dimen/_4sdp"/>
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:src="@drawable/ic_qr_code" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/profile_iv"
-                    android:layout_toLeftOf="@id/scanner_iv"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/_8sdp"
-                    android:layout_marginRight="@dimen/_8sdp">
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:layout_toLeftOf="@id/scanner_iv"
+                    android:layout_toRightOf="@id/profile_iv">
+
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/name_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="New Contact"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/_13sdp"/>
+                        android:textSize="@dimen/_14sdp" />
 
                 </RelativeLayout>
             </RelativeLayout>
