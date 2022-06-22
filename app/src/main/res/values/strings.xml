@@ -22,4 +22,5 @@
     <string name="chats_message"> Your Direct Message Conversations will be displayed here. Tap the + Bottom right to start Some </string>
     <string name="rooms_message"> Your Rooms will be displayed here. Tap the + bottom right to find existing ones or start some of your own </string>
     <string name="calls_message"> Your Voice/Video conversations will be displayed here. Tap the + Bottom right to start Some </string>
+    <string name="select_contact">Select Contact</string>
 </resources>

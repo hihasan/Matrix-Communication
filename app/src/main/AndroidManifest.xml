@@ -32,6 +32,8 @@
         </activity>
         <activity android:name=".views.initial.MainActivity"
             android:theme="@style/Theme.MatrixCommunication.NoActionBar"/>
+        <activity android:name=".views.contacts.ContactsActivity"
+            android:theme="@style/Theme.MatrixCommunication.NoActionBar"/>
     </application>
 
 

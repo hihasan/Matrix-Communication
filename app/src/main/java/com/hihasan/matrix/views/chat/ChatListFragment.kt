@@ -1,12 +1,12 @@
 package com.hihasan.matrix.views.chat
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import com.hihasan.matrix.R
 import com.hihasan.matrix.databinding.FragmentListBinding
 import com.hihasan.matrix.utils.base.BaseFragment
+import com.hihasan.matrix.views.contacts.ContactsActivity
 
 class ChatListFragment : BaseFragment() {
     private lateinit var binding : FragmentListBinding
@@ -29,6 +29,12 @@ class ChatListFragment : BaseFragment() {
         binding.animationView.setAnimation(R.raw.chat_animation)
         binding.titleTv.text = getString(R.string.chats)
         binding.bodyTv.text = getString(R.string.chats_message)
+
+        binding.actionFab.setOnClickListener {
+            val intent = Intent(requireActivity(), ContactsActivity::class.java)
+            startActivity(intent)
+        }
     }
+
 
 }

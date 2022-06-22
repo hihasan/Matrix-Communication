@@ -34,7 +34,7 @@
                         android:layout_toRightOf="@id/app_ico"
                         android:text="@string/app_name"
                         android:textColor="@color/white"
-                        android:layout_marginLeft="@dimen/_4sdp"
+                        android:layout_marginLeft="@dimen/_8sdp"
                         android:layout_centerVertical="true"
                         android:textSize="@dimen/_16sdp"/>
                     <de.hdodenhof.circleimageview.CircleImageView
