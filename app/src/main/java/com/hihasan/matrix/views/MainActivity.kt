@@ -1,11 +1,18 @@
 package com.hihasan.matrix.views
 
+import android.app.Dialog
 import android.os.Bundle
+import android.view.View
 import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.TranslateAnimation
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.snackbar.Snackbar
+import androidx.viewpager.widget.ViewPager.OnPageChangeListener
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.dialog.MaterialDialogs
+import com.hihasan.matrix.R
+import com.hihasan.matrix.adapter.MenuFragmentPagerAdapter
 import com.hihasan.matrix.databinding.ActivityMainBinding
 
 
@@ -22,14 +29,60 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
-//        val navController = findNavController(R.id.nav_host_fragment_content_main)
-//        appBarConfiguration = AppBarConfiguration(navController.graph)
-//        setupActionBarWithNavController(navController, appBarConfiguration)
+        tabSettings()
+        settingsMenu()
 
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+    }
+
+    private fun settingsMenu(){
+        binding.profile.setOnClickListener {
+            val dialog = Dialog(this@MainActivity)
+            dialog.setContentView(R.layout.menu_layout)
+            dialog.show()
         }
+    }
+
+    private fun tabSettings() {
+        val mAdapter = MenuFragmentPagerAdapter(supportFragmentManager)
+        binding.contentMain.viewpager.adapter = mAdapter
+
+        binding.contentMain.viewpager.setCurrentItem(0, true)
+        binding.contentMain.viewpager.addOnPageChangeListener(object : OnPageChangeListener {
+            override fun onPageScrolled(
+                position: Int,
+                positionOffset: Float,
+                positionOffsetPixels: Int
+            ) {}
+
+            override fun onPageSelected(position: Int) {
+//                if (position == 0) {
+//                    translateUp()
+//                    window.setFlags(
+//                        WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//                        WindowManager.LayoutParams.FLAG_FULLSCREEN
+//                    )
+////                    actionButton.setVisibility(View.GONE)
+//                } else if (flag) {
+//                    translateDown()
+////                    actionButton.setVisibility(View.VISIBLE)
+//                }
+            }
+
+            override fun onPageScrollStateChanged(state: Int) {}
+        })
+
+        binding.tabs.setupWithViewPager(binding.contentMain.viewpager)
+
+
+        // This part of code is adjusting size of camera tab part
+
+
+//        // This part of code is adjusting size of camera tab part
+//        val layout = (binding.tabs.getChildAt(0) as LinearLayout).getChildAt(0) as LinearLayout
+//        val layoutParams = layout.layoutParams as LinearLayout.LayoutParams
+//        layoutParams.weight = 0.4f // e.g. 0.5f
+
+//        layout.layoutParams = layoutParams
     }
 
     private fun translateUp() {

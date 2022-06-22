@@ -3,17 +3,20 @@ package com.hihasan.matrix.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import com.hihasan.matrix.views.chat.ChatListFragment
+import com.hihasan.matrix.views.communications.CommunicationListFragment
+import com.hihasan.matrix.views.rooms.RoomListFragment
 
 
 class MenuFragmentPagerAdapter(fm: FragmentManager?) : FragmentPagerAdapter(fm!!) {
 
     override fun getItem(position: Int): Fragment {
         return if (position == 0) {
-            CameraFragment()
+            ChatListFragment()
         } else if (position == 1) {
-            ChatsFragment()
+            RoomListFragment()
         } else {
-            CallsFragment()
+            CommunicationListFragment()
         }
     }
 
