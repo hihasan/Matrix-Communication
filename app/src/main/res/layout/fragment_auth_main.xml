@@ -1,9 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-    <androidx.constraintlayout.widget.ConstraintLayout
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/sign_in_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_55sdp"
+            android:text="@string/i_already_have_an_account"
+            android:textColor="@color/black"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/create_account_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginRight="@dimen/_24sdp"
+            app:cardElevation="@dimen/_15sdp"
+            app:cardMaxElevation="@dimen/_15sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_105sdp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:text="@string/create_account"/>
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
 </layout>

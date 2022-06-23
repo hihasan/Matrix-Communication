@@ -1,9 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/app_logo"
+                android:layout_width="@dimen/_52sdp"
+                android:layout_height="@dimen/_52sdp"
+                android:layout_centerHorizontal="true"
+                app:cardElevation="@dimen/_15sdp"
+                app:cardMaxElevation="@dimen/_15sdp"
+                android:layout_margin="@dimen/_21sdp"
+                app:cardCornerRadius="@dimen/_55sdp"
+                android:background="@android:color/transparent"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sign_up_header_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_21sdp"
+                android:layout_marginLeft="@dimen/_21sdp"
+                android:text="Sign Up to Matrix Communications"
+                android:layout_below="@id/app_logo"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sign_up_body_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginLeft="@dimen/_21sdp"
+                android:layout_marginRight="@dimen/_21sdp"
+                android:text="Join millions for free on the targest public server"
+                android:layout_below="@id/sign_up_header_tv"
+                android:textSize="@dimen/_8sdp"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <RelativeLayout
+                android:id="@+id/input_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sign_up_body_tv"
+                android:layout_marginTop="@dimen/_31sdp"
+                android:layout_marginLeft="@dimen/_21sdp"
+                android:layout_marginRight="@dimen/_21sdp"
+                android:padding="@dimen/_12sdp">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/username_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_32sdp"
+                    android:hint="@string/username"
+                    android:inputType="text"
+                    android:background="@drawable/auth_signup_edt_background"
+                    android:padding="@dimen/_5sdp"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/password_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_below="@id/username_edt"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:background="@drawable/auth_signup_edt_background"
+                    android:padding="@dimen/_5sdp"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="@dimen/_54sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    app:cardElevation="@dimen/_15sdp"
+                    android:layout_below="@id/password_edt"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_alignParentEnd="true">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="Next"/>
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
 </layout>

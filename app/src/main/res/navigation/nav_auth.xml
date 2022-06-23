@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_nav"
+    app:startDestination="@id/auth_main_fragment">
+
+    <fragment
+        android:id="@+id/auth_main_fragment"
+        android:name="com.hihasan.matrix.views.auth.AuthMainFragment"
+        tools:layout="@layout/fragment_auth_main"
+        android:label="Auth Main">
+        <action
+            android:id="@+id/action_auth_main_to_singin"
+            app:destination="@id/auth_sign_in"/>
+        <action
+            android:id="@+id/action_auth_main_to_signup"
+            app:destination="@id/auth_sign_up"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/auth_sign_in"
+        android:name="com.hihasan.matrix.views.auth.SignInFragment"
+        tools:layout="@layout/fragment_signin"
+        android:label="Signin">
+        <action
+            android:id="@+id/action_signin_to_auth_main"
+            app:destination="@id/auth_main_fragment"/>
+        <action
+            android:id="@+id/action_signin_to_signup"
+            app:destination="@id/auth_sign_up"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/auth_sign_up"
+        android:name="com.hihasan.matrix.views.auth.SignupFragment"
+        tools:layout="@layout/fragment_signup"
+        android:label="Signup">
+        <action
+            android:id="@+id/action_signup_to_signin"
+            app:destination="@id/auth_sign_in"/>
+        <action
+            android:id="@+id/action_signup_to_auth_main"
+            app:destination="@id/auth_main_fragment"/>
+    </fragment>
+</navigation>

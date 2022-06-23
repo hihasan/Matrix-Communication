@@ -23,4 +23,8 @@
     <string name="rooms_message"> Your Rooms will be displayed here. Tap the + bottom right to find existing ones or start some of your own </string>
     <string name="calls_message"> Your Voice/Video conversations will be displayed here. Tap the + Bottom right to start Some </string>
     <string name="select_contact">Select Contact</string>
+    <string name="i_already_have_an_account">I ALREADY HAVE AN ACCOUNT</string>
+    <string name="create_account">CREATE ACCOUNT</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
 </resources>
